@@ -1,0 +1,473 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+body{
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+::-webkit-scrollbar{
+  width: 6px;
+  background-color: #242424;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #a5a5a5;
+  border-radius: 5px;
+}
+.home p{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav a{
+  text-decoration: none;
+  color: #000;
+}
+.home{
+  box-shadow: 2px 2px 4px black;
+  background-color: #fff;
+  width: 100px;
+  height: 30px;
+  transform: rotate(90deg);
+  position: fixed;
+  top: 50%;
+  left: 96.9%;
+  right: 0%;
+}
+.container{
+    height: 10000px;
+    width: 100%;
+    background-color: black;
+}
+header{
+  display: flex;
+  flex-direction: column;
+}
+
+.cards{
+
+    padding: 15px;
+    display: grid;
+    width: 100%;
+    height: 50vh;
+    gap: 10px;
+    grid-template-areas: 
+    "project project project work contact"
+    "project project project about about"
+    
+    ;
+}
+.initial{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: end;
+
+}
+.card{
+    padding: 35px;
+    border-radius: 60px;
+    
+}
+.project{
+    background-color: #2901E8;
+    grid-area: project;
+}
+.contact{
+    background-color: #f5da42;
+    grid-area: contact;
+}
+.work{
+    background-color: #d6eaf8;
+    grid-area: work;
+}
+.about{
+    background-color: #242424;
+    grid-area: about;
+    color: #fff;
+}
+.project_conteudo{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  height: 300px;
+  width: 100%;
+}
+.second_tittle{
+    width: 30ch;
+}
+#see-more{
+  background-color: #2901E8;
+  width: max-content;
+  height: max-content;
+  background-color: #242424a1;
+  padding: 5px;
+  border: solid;
+  border-radius: 20px;
+}
+.wrapper{
+  height: max-content;
+  font-size: 22px;
+  color: #fff;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* cards  */
+.project{
+    
+}
+.project_conteudo{
+    color: #fff;
+    display: flex;
+
+}
+@keyframes diminuir {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.98);
+  }
+}
+@keyframes aumentar {
+  0%{
+    transform: scale(0.98);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.link_dimin{
+  animation: aumentar 0.5s forwards ;
+
+}
+.link_dimin:hover {
+  animation: diminuir 0.5s forwards;
+  
+}
+.link_dimin:hover .espiral{
+    display: block;
+    
+}
+.link_dimin{
+    text-decoration: none;
+    color: #000;
+}
+.card p {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+svg {
+	font-family: "Bilbo", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 10s forwards;
+	stroke-width: 2;
+	stroke: #fff;
+	font-size: 70px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,204,0); stroke: #fff;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,204,0); stroke: rgb(255, 255, 255); }
+	80%  {fill: rgba(72,138,204,0); stroke: rgb(255, 255, 255); stroke-width: 3; }
+	100% {
+		fill: rgb(255, 255, 255); stroke: rgba(54,95,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+
+
+
+
+/*Medias*/
+@media (max-width: 1024px) {
+    svg text{
+      font-size: 50px;
+    }
+    .cards{
+      padding: 15px;
+      display: grid;
+      width: 100%;
+      height: 50vh;
+      gap: 10px;
+      grid-template-areas: 
+      "project project"
+      "project project"
+      "contact work"
+      "about about"
+
+      ;
+  }
+  .initial{
+    margin-bottom: 400px;
+  }
+}
+
+
+.teste4 div{
+  background-color: #fff;
+  border-radius: 60px;
+  padding: 20px;
+  
+}
+.aboutme{
+  font-size: 70px;
+  word-spacing: 5px;
+}
+.teste1 div{
+  background-color: #251f25;
+  border-radius: 60px;
+  padding: 20px;
+  height: 1000px;
+  width: 100%;
+}
+#text{
+  line-height: 130px;
+  font-size: 50px;
+  color: #8f8f8f;
+  text-shadow: 0.2px 0.2px 6px rgba(216, 112, 147, 0.445);
+}
+.teste1{
+  padding: 20px;
+  width: 98%;
+  height: max-content;
+  display: flex;
+
+}
+.teste4{
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+  width: 98%;
+  height: 850px;
+  display: grid;
+  grid-template-areas:  
+  "google google"
+  "google google"
+  "awax medcenter"
+  ;
+}
+#google{
+grid-area: google;
+}
+#medcenter{
+grid-area: medcenter;
+}
+#awax{
+grid-area: awax;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translateX(30px) rotate(0deg);
+      background-color: white;
+    }
+    
+    100% {
+      transform: rotate(360deg) translateX(30px) rotate(-360deg);
+      background-color: white;
+    }
+  }
+
+  .espiral {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 860px;
+    top: -50px;
+    display: none;
+  }
+  
+  .block {
+    position: absolute;
+    animation-delay: 0s;
+    animation: rotate 1.0s linear infinite;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+  }
+  
+  #b1 {
+    animation-delay: 0.1s;
+  
+  }
+  #b2{
+    animation-delay: 0.2s;
+  }
+  #b3 {
+  
+    animation-delay: 0.3s;
+  }
+  
+  #b4{
+    animation-delay: 0.4s;
+  }
+  
+  #b5 {
+  
+    animation-delay: 0.5s;
+  }
+  
+  #b6 {
+  
+    animation-delay: 0.6s;
+  }
+  #b7 {
+    animation-delay: 0.7s;
+  
+  }
+  
+  #b8 {
+  
+    animation-delay: 0.8s;
+  }
+  
+  #b9 {
+  
+    animation-delay: 0.9s;
+  }
+  
+  #b10 {
+  
+    animation-delay: 1s;
+  }
+   */
+  
+  
+  
+
+.teste1, .teste2, .wrapper, .cards, .teste3, .teste4{
+  visibility: hidden;
+}
+
